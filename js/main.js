@@ -39,6 +39,11 @@ window.onload = function () {
                     alertDivjobs.innerText = `Your ${i + 1} - input is empty please fill this input`
                     return false
                 }
+                else if (!isNaN(jobName.value.trim())) {
+                    alertDivjobs.classList.remove("opacity")
+                    alertDivjobs.innerText = "Job name must be contains only letters";
+                    return false;
+                }
                 else {
                     alertDivjobs.classList.add("opacity")
                 }
@@ -71,9 +76,14 @@ window.onload = function () {
         })
         addWorkers.addEventListener('click', function () {
             for (let i = 0; i < 3; i++) {
-                if (document.querySelectorAll('.workers input')[i].value == "") {
+                if (document.querySelectorAll('.workers input')[i].value.trim() == "") {
                     alertDivworkers.classList.remove("opacity");
                     alertDivworkers.innerText = `Your ${i + 1} - input is empty please fill this input`
+                    return false
+                }
+                else if (!isNaN(document.querySelectorAll('.workers input')[i].value.trim())) {
+                    alertDivworkers.classList.remove("opacity");
+                    alertDivworkers.innerText = `First name or last name must not be contain a number(numbers)`
                     return false
                 }
                 else {
@@ -81,7 +91,7 @@ window.onload = function () {
                 }
             }
             let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            if (!re.test(String(email.value).toLowerCase())) {
+            if (!re.test(String(email.value.trim()).toLowerCase())) {
                 alertDivworkers.classList.remove("opacity");
                 alertDivworkers.innerText = "Please ipnut a valid E-mail";
                 return false;
@@ -91,7 +101,7 @@ window.onload = function () {
                 alertDivworkers.innerText = `Please select a job`
                 return false
             }
-            else{
+            else {
                 alertDivworkers.classList.add("opacity")
             }
             alertDivworkers.classList.add("opacity");
