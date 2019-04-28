@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                <table class="table table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">#id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Job</th>
+                            <th scope="col">Delete Worker</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col workers">
+                <input type="text" class="form-control my-2" name="fName" placeholder="First name">
+                <input type="text" class="form-control my-2" name="lName" placeholder="Last name">
+                <input type="email" class="form-control my-2" name="email" placeholder="E-mail">
+                <select name="job" id="" class="custom-select">
+                    
+                </select>
+                <button class="btn btn-block btn-outline-warning my-2 add-workers">Add a new Worker</button>
+                <div class="alert alert-warning my-2 opacity workers-alert"></div>
+            </div>
+            <div class="col jobs">
+                <input type="text" class="form-control my-2" name="jobName" placeholder="Job Name">
+                <input type="time" class="form-control my-2" name="startTime" placeholder="Start Time">
+                <input type="time" class="form-control my-2" name="endTime" placeholder="End Time">
+                <input type="text" class="form-control my-2" name="salary" placeholder="Salary">
+                <button class="btn btn-block btn-outline-warning my-2 add-jobs">Add a new Job</button>
+                <div class="alert alert-warning my-2 opacity jobs-alert"></div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/main.js"></script>
+</body>
+
+</html>

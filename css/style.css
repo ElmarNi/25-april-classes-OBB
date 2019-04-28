@@ -1,0 +1,17 @@
+.alert{
+    transition: all 1s ease;
+
+}
+.opacity{
+    opacity: 0;
+    visibility: hidden;
+}
+.delete-worker i {
+    transition: all .3s ease-out;
+}
+.delete-worker:hover i{
+    color: aqua;
+}
+.delete-worker{
+    cursor: pointer;
+} 
